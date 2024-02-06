@@ -3,41 +3,34 @@ this project use Laravel 10
 
 ## Create a new laravel project 
 #### Via Composer
-composer create-project laravel/laravel example-app
-
+_composer create-project laravel/laravel example-app_
 
 #### With global variable
-laravel new example-app
-
+_laravel new example-app_
 
 #### Run the server
-php artisan serve
-
+_php artisan serve_
 
 
 ## Setting up laravel websockets by BeyondCode
 #### Install Laravel Websockets
-composer require beyondcode/laravel-websockets
-
+_composer require beyondcode/laravel-websockets_
 
 #### Register the service provider (will be generate a new table migration)
-php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="migrations"
-
+_php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="migrations"_
 
 #### Migrate the new table
-php artisan migrate
-
+_php artisan migrate_
 
 #### Publish WebSockets Config file (config/websockets.php)
-php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="config"
-
+_php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="config"_
 
 #### Install the PUSHER PHP SDK
-composer require pusher/pusher-php-server
+_composer require pusher/pusher-php-server_
 
 
 #### Change **BROADCAST_DRIVER** in **.env**
-BROADCAST_DRIVER=pusher
+_BROADCAST_DRIVER=pusher_
 
 
 #### In config/broadcasting.php change into this
@@ -57,4 +50,4 @@ BROADCAST_DRIVER=pusher
 
 
 ## Setting up PUSHER
-
+#### Create pusher Channel https://pusher.com/
