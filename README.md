@@ -1,5 +1,12 @@
 # Websockets-With-Beyondcode
-this project use Laravel 10
+Project requirment:
+- Laravel 10
+- Pusher
+- Websockets
+- MySQL
+- NPM
+- Composer
+- Code Editor (Vscode, etc)
 
 ## Create a new laravel project 
 #### Via Composer
@@ -33,7 +40,9 @@ _composer require pusher/pusher-php-server_
 _BROADCAST_DRIVER=pusher_
 
 
-#### In config/broadcasting.php change into this
+#### In `config/broadcasting.php`, modify the `pusher` configuration as follows:
+
+```php
 'pusher' => [
   'driver' => 'pusher',
   'key' => env('PUSHER_APP_KEY'),
@@ -47,7 +56,7 @@ _BROADCAST_DRIVER=pusher_
     'scheme' => 'http'
   ],
 ],
-
+```
 
 ## Setting up PUSHER
 #### Create pusher Channel https://pusher.com/
