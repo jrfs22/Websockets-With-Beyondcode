@@ -10,7 +10,9 @@ Project requirment:
 
 ## Create a new laravel project 
 #### Via Composer
-```php composer create-project laravel/laravel example-app ```
+```php 
+composer create-project laravel/laravel example-app
+```
 
 #### With global variable
 _laravel new example-app_
