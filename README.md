@@ -32,9 +32,29 @@ php artisan migrate
 php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="config"
 
 
-### Install the PUSHER PHP SDK
+#### Install the PUSHER PHP SDK
 composer require pusher/pusher-php-server
 
 
-### Change **BROADCAST_DRIVER** in **.env**
+#### Change **BROADCAST_DRIVER** in **.env**
 BROADCAST_DRIVER=pusher
+
+
+#### In config/broadcasting.php change into this
+'pusher' => [
+  'driver' => 'pusher',
+  'key' => env('PUSHER_APP_KEY'),
+  'secret' => env('PUSHER_APP_SECRET'),
+  'app_id' => env('PUSHER_APP_ID'),
+  'options' => [
+    'cluster' => env('PUSHER_APP_CLUSTER'),
+    'encrypted' => true,
+    'host' => '127.0.0.1',
+    'port' => 6001,
+    'scheme' => 'http'
+  ],
+],
+
+
+## Setting up PUSHER
+
