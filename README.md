@@ -15,31 +15,44 @@ composer create-project laravel/laravel example-app
 ```
 
 #### With global variable
-_laravel new example-app_
+```php
+laravel new example-app
+```
 
 #### Run the server
-_php artisan serve_
-
+```php
+php artisan serve
+```
 
 ## Setting up laravel websockets by BeyondCode
 #### Install Laravel Websockets
-_composer require beyondcode/laravel-websockets_
+```php
+composer require beyondcode/laravel-websockets
+```
 
 #### Register the service provider (will be generate a new table migration)
-_php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="migrations"_
+```php
+php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="migrations"
+```
 
 #### Migrate the new table
-_php artisan migrate_
+```php
+php artisan migrate
+```
 
 #### Publish WebSockets Config file (config/websockets.php)
-_php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="config"_
-
+```php
+php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="config"
+```
 #### Install the PUSHER PHP SDK
-_composer require pusher/pusher-php-server_
-
+```php
+composer require pusher/pusher-php-server
+```
 
 #### Change **BROADCAST_DRIVER** in **.env**
-_BROADCAST_DRIVER=pusher_
+```php
+BROADCAST_DRIVER=pusher
+```
 
 
 #### In `config/broadcasting.php`, modify the `pusher` configuration as follows:
