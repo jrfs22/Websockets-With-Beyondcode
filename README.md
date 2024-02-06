@@ -74,4 +74,21 @@ BROADCAST_DRIVER=pusher
 ```
 
 ## Setting up PUSHER
-#### Create pusher Channel https://pusher.com/
+#### Create pusher Channel https://pusher.com/ until you get **App Key**
+```php
+app_id = "your_app_id"
+key = "your_key"
+secret = "your_secret"
+cluster = "your_cluster"
+```
+
+#### And modify the .env
+```php
+PUSHER_APP_ID=your_app_id
+PUSHER_APP_KEY=your_key
+PUSHER_APP_SECRET=your_secret
+PUSHER_HOST=localhost
+PUSHER_PORT=6001
+PUSHER_SCHEME=http
+PUSHER_APP_CLUSTER=your_cluster
+```
