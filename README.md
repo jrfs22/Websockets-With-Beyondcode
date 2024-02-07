@@ -14,48 +14,48 @@ Project requirment:
 composer create-project laravel/laravel example-app
 ```
 
-#### With global variable
+- With global variable
 ```php
 laravel new example-app
 ```
 
-#### Run the server
+- Run the server
 ```php
 php artisan serve
 ```
 
 ## Setting up laravel websockets by BeyondCode
-#### Install Laravel Websockets
+- Install Laravel Websockets
 ```php
 composer require beyondcode/laravel-websockets
 ```
 
-#### Register the service provider (will be generate a new table migration)
+- Register the service provider (will be generate a new table migration)
 ```php
 php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="migrations"
 ```
 
-#### Migrate the new table
+- Migrate the new table
 ```php
 php artisan migrate
 ```
 
-#### Publish WebSockets Config file (config/websockets.php)
+- Publish WebSockets Config file (config/websockets.php)
 ```php
 php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="config"
 ```
-#### Install the PUSHER PHP SDK
+- Install the PUSHER PHP SDK
 ```php
 composer require pusher/pusher-php-server
 ```
 
-#### Change **BROADCAST_DRIVER** in **.env**
+- Change **BROADCAST_DRIVER** in **.env**
 ```php
 BROADCAST_DRIVER=pusher
 ```
 
 
-#### In `config/broadcasting.php`, modify the `pusher` configuration as follows:
+- In `config/broadcasting.php`, modify the `pusher` configuration as follows:
 
 ```php
 'pusher' => [
@@ -74,7 +74,7 @@ BROADCAST_DRIVER=pusher
 ```
 
 ## Setting up PUSHER
-#### Create pusher Channel https://pusher.com/ until you get **App Key**
+- Create pusher Channel https://pusher.com/ until you get **App Key**
 ```php
 app_id = "your_app_id"
 key = "your_key"
@@ -82,7 +82,7 @@ secret = "your_secret"
 cluster = "your_cluster"
 ```
 
-#### And modify the .env
+- And modify the .env
 ```php
 PUSHER_APP_ID=your_app_id
 PUSHER_APP_KEY=your_key
