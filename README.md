@@ -9,7 +9,7 @@ Project requirment:
 - Code Editor (Vscode, etc)
 
 ## Create a new laravel project 
-#### Via Composer
+- Via Composer
 ```php 
 composer create-project laravel/laravel example-app
 ```
